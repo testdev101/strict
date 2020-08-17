@@ -1,0 +1,443 @@
+/* 
+           Master Stylesheet
+    ============================
+    Template Name : Strict || HTML Template
+    Author: Apu Barua
+    Author url: 
+    Descriptions: Strict HTML Templete
+    Version:
+    Tag: 
+
+ */
+
+/*
+           Table of Content
+        =====================
+ 1. Typography
+ 2. Header
+ 3. Banner
+ 4. Design
+ 5. Service
+ 6. Gallery
+ 7. Contact
+ 8. Footer
+
+*/
+
+/*==================================
+            Typography
+===================================*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #2d3950;
+}
+p{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #999999;
+}
+a{
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #2d3950;
+}
+.btn-custom{
+    padding: 20px 15px;
+    background-color: transparent;
+    border: 1px solid #15a4fa;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    outline: none;
+    z-index: 1;
+}
+.btn-custom::after{
+    position: absolute;
+    content: '';
+    top: -1px;
+    left: -1px;
+    height: 100%;
+    width: 0;
+    background-color: #15a4fa;
+    border: 1px solid #15a4fa;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    z-index: -1;
+}
+.btn-custom:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+/*==================================
+        Header start here
+===================================*/
+header{
+    padding: 30px 0;
+    background-color: #f9f9f9;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    text-transform: uppercase;
+    padding: 0 20px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+nav ul li a:hover{
+    color: #15a4fa;
+}
+nav ul li:last-child a{
+    padding-right: 0;
+}
+/*==================================
+        Header end here
+===================================*/
+/*==================================
+        Banner start here
+===================================*/
+#banner{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 800px;
+    position: relative;
+}
+.banner-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    text-align: center;
+}
+.banner-content h1{
+    font-weight: 700;
+    font-size: 120px;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.banner-content span{
+    display: block;
+    height: 2px;
+    background-color: #15a4fa;
+}
+.banner-content p{
+    color: #fff;
+    padding: 35px 0 65px;
+}
+.banner-content button{
+    text-transform: uppercase;
+}
+.arrow{
+    position: absolute;
+    color: #fff;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    font-size: 35px;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes arrow{
+    from{
+        bottom: 50px;
+    }
+    to{
+        bottom: 150px;
+    }
+}
+
+/*==================================
+        Banner end here
+===================================*/
+/*==================================
+        Design start here
+===================================*/
+#design{
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.design-content h1{
+    padding-bottom: 30px;
+}
+/*==================================
+        Design end here
+===================================*/
+/*==================================
+        Service start here
+===================================*/
+#service{
+    padding: 65px 0;
+}
+.service-content{
+    display: flex;
+    justify-content: space-between;
+}
+.single{
+    text-align: center;
+    width: 27%;
+}
+.icon-part span{
+    background: #48baff;
+    background: -moz-linear-gradient(left, #48baff 50%, #5fc3ff 50%);
+    background: -webkit-linear-gradient(left, #48baff 50%,#5fc3ff 50%);
+    background: linear-gradient(to right, #48baff 50%,#5fc3ff 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 );
+    height: 100px;
+    width: 100px;
+    color: white;
+    display: block;
+    font-size: 45px;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 auto;
+}
+.single h3{
+    font-size: 22px;
+    margin: 30px 0 20px;
+}
+.single p{
+    font-size: 15px;
+}
+/*==================================
+        Service end here
+===================================*/
+/*==================================
+        Gallery start here
+===================================*/
+#gallery{
+    padding: 80px 0 50px;
+    background-color: #f6f9f9;
+}
+.title h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.content p{
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 80px;
+}
+.gallery-content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+.gallery{
+    position: relative;
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+}
+.gallery::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #21a2eecf;
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+.gallery:hover::before{
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+}
+.gallery ul{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, 20%);
+    -webkit-transform: translate(-50%, 20%);
+    -moz-transform: translate(-50%, 20%);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+.gallery:hover ul{
+    opacity: 1;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+}
+.gallery ul li{
+    list-style: none;
+    display: inline;
+}
+.gallery ul li a{
+    padding: 12px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/*==================================
+        Gallery end here
+===================================*/
+/*==================================
+        Contact start here
+===================================*/
+#contact{
+    padding: 80px 0;
+    background-image: url(../images/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#contact::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2c374ad1;
+    z-index: -1;
+}
+#contact .title h2{
+    color: #fff;
+}
+.form{
+    width: 50%;
+    margin: 0 auto;
+}
+form input,textarea{
+    width: 91%;
+    background: transparent;
+    border: 1px solid #999;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    outline: none;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+form input:hover{
+    border: 1px solid #15a4fa;
+}
+form textarea:hover{
+    border: 1px solid #15a4fa;
+}
+form textarea{
+    height: 160px;
+}
+.design{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    margin-top: 10px;
+}
+.left input{
+    width: auto;
+    margin-right: 10px;
+}
+.left span{
+    font-size: 15px;
+    color: #fff;
+}
+.right button{
+    padding: 15px 50px;
+}
+/*==================================
+        Contact end here
+===================================*/
+/*==================================
+        Footer start here
+===================================*/
+footer{
+    padding: 30px 0;
+    background-color: #f6f9f9;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright p{
+    font-size: 15px;
+}
+.social a i{
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: #179def;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+.social a i:hover{
+    transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+}
+/*==================================
+        Footer end here
+===================================*/
